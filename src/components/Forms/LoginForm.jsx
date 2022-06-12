@@ -43,6 +43,14 @@ const theme = createTheme({
 			contrastText: '#fff',
 		},
 	},
+	typography: {
+		fontFamily: '"Montserrat","Roboto", "Helvetica", "Arial", sans-serif',
+		// fontSize: 12,
+		fontWeightLight: 300,
+		fontWeightRegular: 400,
+		fontWeightMedium: 500,
+		fontWeightBold: 700,
+	},
 });
 
 const LoginForm = () => {
@@ -57,7 +65,14 @@ const LoginForm = () => {
 
 	return (
 		<ThemeProvider theme={theme}>
-			<Grid container component='main' sx={{ height: '100vh' }}>
+			<Grid
+				container
+				component='main'
+				sx={{
+					height: '100vh',
+					display: 'flex',
+				}}
+			>
 				<CssBaseline />
 				<Grid
 					item
@@ -75,7 +90,62 @@ const LoginForm = () => {
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
 					}}
-				/>
+				>
+					<Typography
+						component='h1'
+						variant='h1'
+						color='primary.contrastText'
+						sx={{
+							fontFamily: 'Montserrat, Roboto, Helvetica, Arial, sans-serif',
+							fontWeight: 'fontWeightMedium',
+							fontSize: '6rem',
+							alignSelf: 'center',
+							marginTop: '2rem',
+							display: 'flex',
+							flexDirection: 'column',
+							textAlign: 'center',
+							marginBottom: '2rem',
+						}}
+					>
+						Spherix Global Insights
+					</Typography>
+					<Typography
+						variant='h5'
+						textAlign='center'
+						color='primary.contrastText'
+						sx={{
+							fontFamily: 'Montserrat, Roboto, Helvetica, Arial, sans-serif',
+							fontWeight: 'fontWeightMedium',
+							fontSize: '1.5rem',
+							alignSelf: 'center',
+							marginTop: '2rem',
+							display: 'flex',
+							flexDirection: 'column',
+							textAlign: 'center',
+							marginBottom: '2rem',
+						}}
+					>
+						Hyper-Focused, Independent, Pharma Market Insights
+					</Typography>
+					<Typography
+						variant='h3'
+						textAlign='center'
+						color='primary.contrastText'
+						sx={{
+							fontFamily: 'Montserrat, Roboto, Helvetica, Arial, sans-serif',
+							fontWeight: 'fontWeightMedium',
+							fontSize: '4rem',
+							alignSelf: 'center',
+							marginTop: '2rem',
+							display: 'flex',
+							flexDirection: 'column',
+							textAlign: 'center',
+							marginBottom: '2rem',
+						}}
+					>
+						Invest in Intelligence that Delivers
+					</Typography>
+				</Grid>
 				<Grid item xs={12} sm={6} md={5} component={Paper} elevation={6} square>
 					<Box
 						sx={{
@@ -128,7 +198,6 @@ const LoginForm = () => {
 								fullWidth
 								variant='contained'
 								sx={{ mt: 3, mb: 2 }}
-								backgroundColor='#8CC7EC'
 							>
 								Sign In
 							</Button>
