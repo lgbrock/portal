@@ -8,6 +8,20 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: '#8CC7EC',
+			contrastText: '#fff',
+		},
+		secondary: {
+			main: '#181818',
+			contrastText: '#fff',
+		},
+	},
+});
 
 const Search = styled('div')(({ theme }) => ({
 	position: 'relative',
@@ -54,38 +68,40 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 const NavBar = () => {
 	return (
-		<Box sx={{ flexGrow: 1 }}>
-			<AppBar position='static'>
-				<Toolbar>
-					<IconButton
-						size='large'
-						edge='start'
-						color='inherit'
-						aria-label='open drawer'
-						sx={{ mr: 2 }}
-					>
-						<MenuIcon />
-					</IconButton>
-					<Typography
-						variant='h6'
-						noWrap
-						component='div'
-						sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-					>
-						Spherix Global
-					</Typography>
-					<Search>
-						<SearchIconWrapper>
-							<SearchIcon />
-						</SearchIconWrapper>
-						<StyledInputBase
-							placeholder='Search…'
-							inputProps={{ 'aria-label': 'search' }}
-						/>
-					</Search>
-				</Toolbar>
-			</AppBar>
-		</Box>
+		<ThemeProvider theme={theme}>
+			<Box sx={{ flexGrow: 1 }}>
+				<AppBar position='static'>
+					<Toolbar>
+						<IconButton
+							size='large'
+							edge='start'
+							color='inherit'
+							aria-label='open drawer'
+							sx={{ mr: 2 }}
+						>
+							<MenuIcon />
+						</IconButton>
+						<Typography
+							variant='h6'
+							noWrap
+							component='div'
+							sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+						>
+							Spherix Global
+						</Typography>
+						<Search>
+							<SearchIconWrapper>
+								<SearchIcon />
+							</SearchIconWrapper>
+							<StyledInputBase
+								placeholder='Search…'
+								inputProps={{ 'aria-label': 'search' }}
+							/>
+						</Search>
+					</Toolbar>
+				</AppBar>
+			</Box>
+		</ThemeProvider>
 	);
 };
 
