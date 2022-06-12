@@ -40,14 +40,7 @@ npm run test
 
 👤 **Logan Brock**
 
-* Website: www.linkedin.com/in/loganbrock
-* Twitter: [@lifeisagarden23](https://twitter.com/lifeisagarden23)
-* Github: [@lgbrock](https://github.com/lgbrock)
-* LinkedIn: [@loganbrock](https://linkedin.com/in/loganbrock)
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+- Website: www.linkedin.com/in/loganbrock
+- Twitter: [@lifeisagarden23](https://twitter.com/lifeisagarden23)
+- Github: [@lgbrock](https://github.com/lgbrock)
+- LinkedIn: [@loganbrock](https://linkedin.com/in/loganbrock)
