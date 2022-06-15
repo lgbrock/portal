@@ -76,17 +76,15 @@ const LoginForm = () => {
 				<CssBaseline />
 				<Grid
 					item
-					xs={false}
+					xs={4}
 					sm={6}
 					md={7}
 					sx={{
 						backgroundImage:
 							'url(https://www.spherixglobalinsights.com/wp-content/uploads/hero-home.png)',
 						backgroundRepeat: 'no-repeat',
-						backgroundColor: (t) =>
-							t.palette.mode === 'medium'
-								? t.palette.grey[50]
-								: t.palette.grey[900],
+
+						backgroundColor: '#8cc7ec',
 						backgroundSize: 'cover',
 						backgroundPosition: 'center',
 					}}
@@ -100,11 +98,11 @@ const LoginForm = () => {
 							fontWeight: 'fontWeightMedium',
 							fontSize: '6rem',
 							alignSelf: 'center',
-							marginTop: '2rem',
+							marginTop: '10rem',
+							marginBottom: '2rem',
 							display: 'flex',
 							flexDirection: 'column',
 							textAlign: 'center',
-							marginBottom: '2rem',
 						}}
 					>
 						Spherix Global Insights
@@ -140,7 +138,7 @@ const LoginForm = () => {
 							display: 'flex',
 							flexDirection: 'column',
 							textAlign: 'center',
-							marginBottom: '2rem',
+							marginBottom: '10rem',
 						}}
 					>
 						Invest in Intelligence that Delivers
@@ -157,7 +155,7 @@ const LoginForm = () => {
 							alignContent: 'center',
 						}}
 					>
-						<Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+						<Avatar sx={{ m: 1, bgcolor: 'primary.main', marginTop: '10rem' }}>
 							<LockOutlinedIcon />
 						</Avatar>
 						<Typography component='h1' variant='h5'>

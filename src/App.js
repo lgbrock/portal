@@ -1,9 +1,11 @@
-import Login from './pages/Login/Login';
+// import Body from './components/Hero/Body';
+import NestedDemo from './components/Files/NestedDemo';
 
 const App = () => {
 	return (
 		<>
-			<Login />
+			{/* <Body /> */}
+			<NestedDemo />
 		</>
 	);
 };
