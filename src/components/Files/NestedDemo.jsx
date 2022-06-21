@@ -1,7 +1,29 @@
 import React from 'react';
+import Grid from '@mui/material/Grid';
 import FileBrowser, { Icons } from 'react-keyed-file-browser';
 import Moment from 'moment';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+const theme = createTheme({
+	palette: {
+		primary: {
+			main: '#8CC7EC',
+			contrastText: '#fff',
+		},
+		secondary: {
+			main: '#181818',
+			contrastText: '#fff',
+		},
+	},
+	typography: {
+		fontFamily: '"Montserrat","Roboto", "Helvetica", "Arial", sans-serif',
+		// fontSize: 12,
+		fontWeightLight: 300,
+		fontWeightRegular: 400,
+		fontWeightMedium: 500,
+		fontWeightBold: 700,
+	},
+});
 class NestedDemo extends React.Component {
 	state = {
 		files: [
@@ -149,21 +171,23 @@ class NestedDemo extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<ThemeProvider theme={theme}>
 				<h1>NestedDemo</h1>
-				<FileBrowser
-					files={this.state.files}
-					icons={Icons.FontAwesome(4)}
-					onCreateFolder={this.handleCreateFolder}
-					onCreateFiles={this.handleCreateFiles}
-					onMoveFolder={this.handleRenameFolder}
-					onMoveFile={this.handleRenameFile}
-					onRenameFolder={this.handleRenameFolder}
-					onRenameFile={this.handleRenameFile}
-					onDeleteFolder={this.handleDeleteFolder}
-					onDeleteFile={this.handleDeleteFile}
-				/>
-			</div>
+				<Grid container direction='row' justify='space-between'>
+					<FileBrowser
+						files={this.state.files}
+						icons={Icons.FontAwesome(4)}
+						onCreateFolder={this.handleCreateFolder}
+						onCreateFiles={this.handleCreateFiles}
+						onMoveFolder={this.handleRenameFolder}
+						onMoveFile={this.handleRenameFile}
+						onRenameFolder={this.handleRenameFolder}
+						onRenameFile={this.handleRenameFile}
+						onDeleteFolder={this.handleDeleteFolder}
+						onDeleteFile={this.handleDeleteFile}
+					/>
+				</Grid>
+			</ThemeProvider>
 		);
 	}
 }

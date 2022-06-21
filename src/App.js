@@ -1,10 +1,14 @@
-import Body from './components/Hero/Body';
-import NestedDemo from './components/Files/NestedDemo';
+import Login from './pages/Login/Login';
+import Portal from './pages/Portal/Portal';
+import FileSystemNavigator from './components/Files/FileSystemNavigator';
 
 const App = () => {
 	return (
 		<>
-			<NestedDemo />
+			<Login />
+			<br />
+			<Portal />
+			<FileSystemNavigator />
 		</>
 	);
 };

@@ -13,25 +13,6 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-function Copyright(props) {
-	return (
-		<Typography
-			variant='body2'
-			s
-			color='text.secondary'
-			align='center'
-			{...props}
-		>
-			{'Copyright © '}
-			<Link color='inherit' href='https://www.spherixglobalinsights.com/'>
-				Spherix Global Insights
-			</Link>{' '}
-			{new Date().getFullYear()}
-			{'.'}
-		</Typography>
-	);
-}
-
 const theme = createTheme({
 	palette: {
 		primary: {
@@ -52,6 +33,25 @@ const theme = createTheme({
 		fontWeightBold: 700,
 	},
 });
+
+function Copyright(props) {
+	return (
+		<Typography
+			variant='body2'
+			s
+			color='text.secondary'
+			align='center'
+			{...props}
+		>
+			{'Copyright © '}
+			<Link color='inherit' href='https://www.spherixglobalinsights.com/'>
+				Spherix Global Insights
+			</Link>{' '}
+			{new Date().getFullYear()}
+			{'.'}
+		</Typography>
+	);
+}
 
 const LoginForm = () => {
 	const handleSubmit = (event) => {
@@ -187,10 +187,10 @@ const LoginForm = () => {
 								id='password'
 								autoComplete='current-password'
 							/>
-							<FormControlLabel
+							{/* <FormControlLabel
 								control={<Checkbox value='remember' color='primary' />}
 								label='Remember me'
-							/>
+							/> */}
 							<Button
 								type='submit'
 								fullWidth
@@ -202,12 +202,7 @@ const LoginForm = () => {
 							<Grid container>
 								<Grid item xs>
 									<Link href='#' variant='body2'>
-										Forgot password?
-									</Link>
-								</Grid>
-								<Grid item>
-									<Link href='#' variant='body2'>
-										{"Don't have an account? Sign Up"}
+										Don't have a password? Click here for access!
 									</Link>
 								</Grid>
 							</Grid>

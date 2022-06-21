@@ -46,7 +46,7 @@ const SearchIconWrapper = styled('div')(({ theme }) => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
-	backgroundColor: '8CC7EC',
+	backgroundColor: '181818',
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
